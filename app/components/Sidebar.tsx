@@ -1,8 +1,12 @@
 import Image from "next/image";
-
-const tags: string[] = ["Pantry", "Obsolete", "Blender", "Lightning Deal"];
+import { useSelector } from "react-redux";
+import { RootState } from "@/lib/store";
 
 export function Sidebar() {
+  const product = useSelector((state: RootState) => state.product);
+
+  if (!product) return null;
+
   return (
     <div className="w-1/4 h-screen bg-white shadow-lg">
       <SidebarItem />
@@ -12,24 +16,21 @@ export function Sidebar() {
 }
 
 function SidebarItem() {
+  const product = useSelector((state: RootState) => state.product);
+
   return (
     <div className="flex flex-col items-center justify-center gap-4 p-6">
       <Image
-        src="/nutribullet.webp"
+        src={product.image}
         alt="logo"
         width={200}
         height={200}
         className="rounded-xl"
       />
       <div className="text-center">
-        <h1 className="text-xl font-bold">Shark Ninja</h1>
+        <h1 className="text-xl font-bold">{product.title}</h1>
         <div className="text-center mt-2">
-          <p className="text-sm text-gray-400">
-            Magic Bullet NutriBullet 12-Piece
-          </p>
-          <p className="text-sm text-gray-400">
-            High-Speed Blender/Mixer System
-          </p>
+          <p className="text-sm text-gray-400">{product.subtitle}</p>
         </div>
       </div>
     </div>
@@ -37,11 +38,13 @@ function SidebarItem() {
 }
 
 function SidebarDetails() {
+  const tags = useSelector((state: RootState) => state.product.tags);
+
   return (
     <div className="p-6 border-y border-gray-200">
       <div className="flex items-center flex-wrap gap-2">
         {tags.map((tag) => (
-          <Tag text={tag} />
+          <Tag key={tag} text={tag} />
         ))}
       </div>
     </div>
