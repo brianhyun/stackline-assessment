@@ -9,6 +9,7 @@ import mockData from "@/public/mock_data.json";
 
 import { Sidebar } from "./components/Sidebar";
 import { RootState } from "@/lib/store";
+import { SalesGraph } from "./components/SalesGraph";
 
 export default function IndexPage() {
   const dispatch = useDispatch();
@@ -23,8 +24,9 @@ export default function IndexPage() {
   if (!product || !product.title) return null;
 
   return (
-    <div className="w-full flex bg-gray-100 p-6">
+    <div className="w-full flex gap-4 bg-gray-100 p-6">
       <Sidebar />
+      <SalesGraph />
     </div>
   );
 }

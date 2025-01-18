@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { useSelector } from "react-redux";
+
 import { RootState } from "@/lib/store";
+import { Container } from "./Container";
 
 export function Sidebar() {
   const product = useSelector((state: RootState) => state.product);
@@ -8,10 +10,10 @@ export function Sidebar() {
   if (!product) return null;
 
   return (
-    <div className="w-1/4 h-screen bg-white shadow-lg">
+    <Container className="w-1/4">
       <SidebarItem />
       <SidebarDetails />
-    </div>
+    </Container>
   );
 }
 
@@ -30,7 +32,9 @@ function SidebarItem() {
       <div className="text-center">
         <h1 className="text-xl font-bold">{product.title}</h1>
         <div className="text-center mt-2">
-          <p className="text-sm text-gray-400">{product.subtitle}</p>
+          <p className="max-w-[250px] text-sm text-gray-400">
+            {product.subtitle}
+          </p>
         </div>
       </div>
     </div>
