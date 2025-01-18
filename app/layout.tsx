@@ -1,9 +1,7 @@
-import Image from "next/image";
 import type { ReactNode } from "react";
 import { StoreProvider } from "./StoreProvider";
 
 import "./styles/globals.css";
-import styles from "./styles/layout.module.css";
 
 import { Header } from "./components/Header";
 
@@ -16,9 +14,9 @@ export default function RootLayout({ children }: Props) {
     <StoreProvider>
       <html lang="en">
         <body>
-          <section className={styles.container}>
+          <section>
             <Header />
-            <main className={styles.main}>{children}</main>
+            <main>{children}</main>
           </section>
         </body>
       </html>

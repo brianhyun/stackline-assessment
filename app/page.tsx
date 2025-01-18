@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
-import { Counter } from "./components/counter/Counter";
+
+import { Sidebar } from "./components/Sidebar";
 
 export default function IndexPage() {
-  return <Counter />;
+  return (
+    <div className="w-full flex bg-gray-100 p-6">
+      <Sidebar />
+    </div>
+  );
 }
 
 export const metadata: Metadata = {
-  title: "Redux Toolkit",
+  title: "Dashboard",
 };
