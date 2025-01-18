@@ -4,7 +4,5 @@ interface ContainerProps {
 }
 
 export function Container({ children, className }: ContainerProps) {
-  return (
-    <div className={`h-screen bg-white shadow-lg ${className}`}>{children}</div>
-  );
+  return <div className={`bg-white shadow-lg ${className}`}>{children}</div>;
 }

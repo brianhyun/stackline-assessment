@@ -10,7 +10,7 @@ export function Sidebar() {
   if (!product) return null;
 
   return (
-    <Container className="w-1/4">
+    <Container className="w-1/4 h-screen">
       <SidebarItem />
       <SidebarDetails />
     </Container>
