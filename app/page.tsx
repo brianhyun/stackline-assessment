@@ -25,9 +25,9 @@ export default function IndexPage() {
   if (!product || !product.title) return null;
 
   return (
-    <div className="w-full flex gap-4 bg-gray-100 p-6">
+    <div className="w-full flex gap-4 bg-gray-100 p-4 py-16">
       <Sidebar />
-      <div className="flex flex-col gap-4 w-full">
+      <div className="flex flex-col gap-20 w-full">
         <SalesChart />
         <SalesTable />
       </div>
