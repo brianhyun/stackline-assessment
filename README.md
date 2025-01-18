@@ -1,29 +1,93 @@
-# Redux Toolkit TypeScript Example
+# Stackline Assessment Project
 
-This example shows how to integrate Next.js with [Redux Toolkit](https://redux-toolkit.js.org).
+This project is a product dashboard built using Next.js with the App Router. It displays product information, a table of sales data, and an interactive chart that aggregates sales data by month.
 
-**Redux Toolkit**(also known as "RTK" for short) provides a standardized way to write Redux logic. It includes utilities that help simplify many common use cases, including [store setup](https://redux-toolkit.js.org/api/configureStore), [creating reducers and writing immutable update logic](https://redux-toolkit.js.org/api/createreducer), and even [creating entire "slices" of state at once](https://redux-toolkit.js.org/api/createslice). This example showcases each of these features in conjunction with Next.js.
+## Features
 
-## Deploy Your Own
+- **React** for building the user interface
+- **Redux Toolkit** for state management
+- **Recharts** for interactive data visualization
+- **TailwindCSS** for modern and responsive styling
+- **Next.js App Router** for routing and API integration
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-redux)
+## Installation
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-redux&project-name=with-redux&repository-name=with-redux)
+### Prerequisites
 
-## How to Use
+Ensure you have the following installed:
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+- Node.js (version 14 or higher)
+- npm or yarn
 
-```bash
-npx create-next-app --example with-redux with-redux-app
-```
+### Steps
 
-```bash
-yarn create next-app --example with-redux with-redux-app
-```
+1. Clone the repository:
 
-```bash
-pnpm create next-app --example with-redux with-redux-app
-```
+   ```bash
+   git clone <repository-url>
+   ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+2. Navigate to the project directory:
+
+   ```bash
+   cd stackline-assessment
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+4. Run the development server:
+
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+5. Open your browser and navigate to:
+   ```
+   http://localhost:3000
+   ```
+
+## Scripts
+
+- **`npm run dev`**: Runs the development server.
+- **`npm run build`**: Builds the project for production.
+- **`npm start`**: Starts the production server.
+
+## Features Breakdown
+
+### Product Information
+
+The product details are displayed prominently, including:
+
+- Title
+- Subtitle
+- Tags
+
+### Monthly Sales Chart
+
+- Aggregates weekly sales data by month.
+- Displays retail and wholesale sales trends.
+
+### Table of Sales Data
+
+- Displays weekly sales data.
+- Columns: Retail Sales, Wholesale Sales, Units Sold, Retailer Margin.
+
+### API Integration
+
+- A mock API (`/api/sales`) serves sales data.
+
+## Technologies Used
+
+- **Next.js**: Framework for building server-rendered React applications.
+- **Redux Toolkit**: State management with slices for products and sales data.
+- **Recharts**: Interactive and responsive charts.
+- **TailwindCSS**: Utility-first CSS framework for styling.
+- **TypeScript**: Type safety for JavaScript.
