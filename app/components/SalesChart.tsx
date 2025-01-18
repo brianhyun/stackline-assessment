@@ -17,7 +17,7 @@ export function SalesChart() {
   }, []);
 
   return (
-    <Container className="w-3/4 p-6">
+    <Container className="p-6">
       <h2 className="text-lg font-semibold text-gray-700 mb-4">Retail Sales</h2>
       {chartData.length > 0 && <Chart chartData={chartData} />}
     </Container>

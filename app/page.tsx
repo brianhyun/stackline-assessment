@@ -10,6 +10,7 @@ import mockData from "@/public/mock_data.json";
 import { Sidebar } from "./components/Sidebar";
 import { RootState } from "@/lib/store";
 import { SalesChart } from "./components/SalesChart";
+import { SalesTable } from "./components/SalesTable";
 
 export default function IndexPage() {
   const dispatch = useDispatch();
@@ -26,7 +27,10 @@ export default function IndexPage() {
   return (
     <div className="w-full flex gap-4 bg-gray-100 p-6">
       <Sidebar />
-      <SalesChart />
+      <div className="flex flex-col gap-4 w-full">
+        <SalesChart />
+        <SalesTable />
+      </div>
     </div>
   );
 }
