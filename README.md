@@ -1,6 +1,6 @@
 # Stackline Assessment Project
 
-This project is a product dashboard built using Next.js with the App Router. It displays product information, a table of sales data, and an interactive chart that aggregates sales data by month.
+This project is a product dashboard built using Next.js with the App Router. It displays product information, a table of sales data, and an interactive chart that aggregates sales data by month. The link to the project is [here](https://stackline-assessment-bay.vercel.app/).
 
 ## Features
 
