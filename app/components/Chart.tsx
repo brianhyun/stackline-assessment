@@ -9,11 +9,30 @@ export function Chart({ chartData }: { chartData: SalesData[] }) {
           dataKey="month"
           tick={{ fontSize: 12 }}
           interval={0}
-          tickFormatter={(tick) =>
-            new Date(tick).toLocaleString("default", { month: "short" })
+          tickFormatter={(tick) => {
+            const monthNumber = parseInt(tick.split("-")[1], 10);
+            const months = [
+              "Jan",
+              "Feb",
+              "Mar",
+              "Apr",
+              "May",
+              "Jun",
+              "Jul",
+              "Aug",
+              "Sep",
+              "Oct",
+              "Nov",
+              "Dec",
+            ];
+            return months[monthNumber - 1];
+          }}
+        />
+        <Tooltip
+          formatter={(value: number) =>
+            `$${new Intl.NumberFormat().format(value)}`
           }
         />
-        <Tooltip />
         <Line
           type="monotone"
           dataKey="retailSales"

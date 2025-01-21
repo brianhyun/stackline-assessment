@@ -1,9 +1,10 @@
 import { Container } from "./Container";
 import { useEffect, useState } from "react";
 import { Chart } from "./Chart";
+import { MonthlySalesData } from "@/types/sales";
 
 export function SalesChart() {
-  const [chartData, setChartData] = useState([]);
+  const [chartData, setChartData] = useState<MonthlySalesData[]>([]);
 
   useEffect(() => {
     const fetchSales = async () => {
